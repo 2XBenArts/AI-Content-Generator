@@ -24,7 +24,7 @@ def productDescription():
     if request.method == 'POST':
         submission = request.form['productDescription']
         query = "Generate detailed product description for: {}".format(submission)
-        openAIAnswer= aicontent.openAIQuery(query)
+        genAIAnswer = aicontent.openAIQuery(query)
         prompt = 'AI Suggestions for {} are:'.format(query)
     
     return render_template('product-description.html', **locals())
@@ -37,7 +37,7 @@ def jobDescription():
     if request.method == 'POST':
         submission = request.form['jobDescription']
         query = "Generate the job description for: {}".format(submission)
-        openAIAnswer= aicontent.openAIQuery(query)
+        genAIAnswer = aicontent.openAIQuery(query)
         prompt = 'AI Suggestions for {} are:'.format(submission)
     return render_template('job-description.html', **locals())
 
@@ -49,7 +49,7 @@ def tweetIdeas():
     if request.method == 'POST':
         submission = request.form['tweetIdeas']
         query = "Generate the tweet ideas for: {}".format(submission)
-        openAIAnswer= aicontent.openAIQuery(query)
+        genAIAnswer = aicontent.openAIQuery(query)
         prompt = 'AI Suggestions for {} are:'.format(submission)
     return render_template('tweet-ideas.html', **locals())
 
@@ -62,8 +62,8 @@ def coldEmails():
 
 		submission = request.form['coldEmails']
 		query = "Write a cold email to potential clients about: {}".format(submission)
-		openAIAnswerUnformatted = aicontent.openAIQuery(query)
-		openAIAnswer = openAIAnswerUnformatted.replace('\n', '<br>')
+		genAIAnswerUnformatted = aicontent.openAIQuery(query)
+		genAIAnswer = genAIAnswerUnformatted.replace('\n', '<br>')
 		prompt = 'AI Suggestions for {} are:'.format(submission)
 
 	return render_template('cold-emails.html', **locals())
@@ -76,7 +76,7 @@ def socialMedia():
     if request.method == 'POST':
         submission = request.form['socialMedia']
         query = "Generate the social media advert ideas for: {}".format(submission)
-        openAIAnswer= aicontent.openAIQuery(query)
+        genAIAnswer = aicontent.openAIQuery(query)
         prompt = 'AI Suggestions for {} are:'.format(submission)
     return render_template('social-media.html', **locals())
 
@@ -87,7 +87,7 @@ def businessPitch():
     if request.method == 'POST':
         submission = request.form['businessPitch']
         query = "Generate the business pitch for: {}".format(submission)
-        openAIAnswer= aicontent.openAIQuery(query)
+        genAIAnswer = aicontent.openAIQuery(query)
         prompt = 'AI Suggestions for {} are:'.format(submission)
     return render_template('business-pitch.html', **locals())
 
@@ -98,7 +98,7 @@ def videoIdeas():
     if request.method == 'POST':
         submission = request.form['videoIdeas']
         query = "Generate the youTube video ideas for: {}".format(submission)
-        openAIAnswer= aicontent.openAIQuery(query)
+        genAIAnswer= aicontent.openAIQuery(query)
         prompt = 'AI Suggestions for {} are:'.format(submission)
     return render_template('video-ideas.html', **locals())
 
@@ -109,7 +109,7 @@ def videoDescription():
     if request.method == 'POST':
         submission = request.form['videoDescription']
         query = "Generate the youTube video description for: {}".format(submission)
-        openAIAnswer= aicontent.openAIQuery(query)
+        genAIAnswer= aicontent.openAIQuery(query)
         prompt = 'AI Suggestions for {} are:'.format(submission)
     return render_template('video-description.html', **locals())
 

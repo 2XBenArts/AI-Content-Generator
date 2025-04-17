@@ -1,10 +1,9 @@
-import openai
+import google.generativeai as genai
 import config
-openai.api_key = config.OPENAI_API_KEY
+genai.configure( 'AIzaSyA0-37asyzLgCKp4BbOxJke9M3w8S2UEGo' ) #AlzaSyA0-37asyzLgCKp4BbOxJke9M3w8S2UEGo)
 
 def openAIQuery(query):
-    response = openai.Completion.create(
-      engine="davinci-instruct-beta-v3",
+    response = genai.Completion.create(
       prompt= query,
       temperature=0.8,
       max_tokens=200,

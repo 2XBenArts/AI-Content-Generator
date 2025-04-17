@@ -1,2 +1,7 @@
 Flask==2.1.0
-openai==0.26.4
+google generative ai == 0.1.0
+google-cloud-aiplatform==2.10.0
+google-cloud-storage==2.5.0
+google-cloud-bigquery==3.2.0
+google-cloud-bigquery-storage==2.14.0
+
